@@ -1,0 +1,9 @@
+node_modules
+.vscode
+__pycache__
+
+env.py
+Profanity.Json
+Configuration.Json
+local.settings.json
+host.json

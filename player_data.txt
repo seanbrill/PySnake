@@ -1,0 +1,6 @@
+high_score = (0, 'Easy')
+snake_color = [41, 255, 76]
+food_color = [243, 83, 83]
+rainbow_snake = False
+enable_slither_sound = True
+enable_food_sound = True

@@ -1,4 +1,3 @@
-import tkinter as tk
 starting_player_size = 3
 gameboard_size = 20
 square_px = 20
@@ -12,21 +11,18 @@ window_color = '#101010'
 leaderboard_alt_color = '#3c3c3c'
 player_data = 'player_data.txt'
 info_text = '''
-PySnake is a captivating snake game built in Python using tkinter. 
-Maneuver the snake with either the WASD keys or Arrow keys. 
-Your objective: collect food to accumulate points and extend the snake's length. But beware! 
-Touching your own body or the walls ends the game. 
-Post your name on the leaderboard after each game and see how you stack up against players worldwide. 
-The leaderboard also showcases the difficulty of each player's score with color-coding (Green: Easy, Orange: Normal, Red: Hard). 
-Who will claim the title of the ultimate PySnake player?
+PySnake, an enthralling snake game crafted in Python with the tkinter library, beckons players into a thrilling challenge. Navigate the snake gracefully using either the WASD keys or Arrow keys. Your mission: gather food to accrue points and elongate the snake, but exercise caution! Colliding with your own body or the walls brings the game to an abrupt end.
 
-Customize your gaming experience on the settings page by adjusting the snake color, food color, and sounds to match your preferences.
-Reach a top score of at least 100 to unlock the coveted Rainbow Snake for an extra touch of excitement. 
+After each intense round, etch your name onto the leaderboard and measure your prowess against competitors from around the globe. The leaderboard cleverly uses color-coding (Green: Easy, Orange: Normal, Red: Hard) to denote the difficulty of each player's score. Who will emerge as the ultimate PySnake virtuoso?
 
-Developed by Sean Brill using Python and tkinter for the UI and gameplay, 
-the backend services leverage Azure Cloud Functions with Node.js. 
-Explore the code on GitHub, and for more information, visit my website at https://seanbrill.com. 
+Delve into a personalized gaming venture on the settings page by tweaking the snake color, food color, and sounds to align with your preferences. Achieve a stellar score of at least 100 to unlock the coveted Rainbow Snake, adding an extra layer of excitement to your gameplay.
 
-Copyright [year].
+Developed by Sean Brill, PySnake marries Python and tkinter for an immersive UI and gameplay experience. Behind the scenes, Azure Cloud Functions with Node.js power the game's backend services.
+
+Contact: seanbrill54@gmail.com
+Website: https://seanbrill.com
+Github : https://github.com/seanbrill/PySnake
+
+Copyright © 2023 Sean Brill.
 '''
 

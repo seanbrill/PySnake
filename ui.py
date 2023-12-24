@@ -76,6 +76,11 @@ class UIController:
         self.window.title('PySnake')
         self.window.resizable(False, False)
         self.window.configure(bg=window_color)
+        # Set the path to your icon file (should be a .ico file on Windows)
+        icon_path = "./assets/icons/snake.ico"
+
+        # Use the iconbitmap method to set the icon
+        self.window.iconbitmap(icon_path)
         self.InitializeUI()
         self.window.mainloop()
 
@@ -237,12 +242,13 @@ class UIController:
         # Insert leaderboard data into the Canvas
         get_leaderboard_response = HttpManager.instance.get_leaderboard()
 
-        # Get number of rows in the leaderboard
-        num_rows = len(get_leaderboard_response['leaderboard'])
+        print('get leaderboard response :' + str(get_leaderboard_response))
 
-        if get_leaderboard_response['success'] and  num_rows > 0:
-            #spacer = tk.Frame(self.leaderboard_frame,height=(0 * num_rows), background=window_color)
-            #spacer.pack()
+        if get_leaderboard_response['success'] and  len(get_leaderboard_response['leaderboard']) > 0:
+            
+            # Get number of rows in the leaderboard
+            num_rows = len(get_leaderboard_response['leaderboard'])
+
             for i, player in enumerate(get_leaderboard_response['leaderboard'], start=1):
                 # normalize leaderboard place values to have 2 digits
                 i_display = f"{i:02d}"
@@ -266,7 +272,7 @@ class UIController:
 
             self.leaderboard_canvas.create_window((canvas_width // 2) - 10, (num_rows * 12.2), anchor=tk.CENTER, window=self.leaderboard_frame, width=canvas_width)
             # Make sure you can scroll to see all rows
-            self.leaderboard_canvas.configure(scrollregion=(0,0,0,canvas_height + (2.7 * num_rows)))
+            self.leaderboard_canvas.configure(scrollregion=(0,0,0,canvas_height + (5 * num_rows)))
         else:
             self.leaderboard_canvas.pack_forget()
             self.leaderboard_scrollbar.place_forget()

@@ -7,3 +7,6 @@ Profanity.Json
 Configuration.Json
 local.settings.json
 host.json
+*.spec
+build
+

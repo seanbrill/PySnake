@@ -180,6 +180,7 @@ class GameManager:
 
     def GetContext(self, key='all', file_path=player_data):
         try:
+            print('player data file path :' + file_path)
             with open(file_path, 'r') as file:
                 lines = file.readlines()
             if key == 'all':
